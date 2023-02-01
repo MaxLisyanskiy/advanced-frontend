@@ -1,14 +1,24 @@
-import webpack from 'webpack'
+import webpack from "webpack";
 
 export function buildLoaders(): webpack.RuleSetRule[] {
+  // Если не используем ts - нужен babel-loader для js
+  const typescriptLoader = {
+    test: /\.tsx?$/,
+    use: "ts-loader",
+    exclude: /node_modules/,
+  };
 
-    const typescriptLoader = {
-        test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/,
-    }
+  const cssLoader = {
+    test: /\.s[ac]ss$/i,
+    use: [
+      // Creates `style` nodes from JS strings
+      "style-loader",
+      // Translates CSS into CommonJS
+      "css-loader",
+      // Compiles Sass to CSS
+      "sass-loader",
+    ],
+  };
 
-    return [
-        typescriptLoader
-    ]
+  return [typescriptLoader, cssLoader];
 }
