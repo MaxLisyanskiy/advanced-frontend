@@ -4,10 +4,17 @@
 @import "themes/dark";
 
 .app {
+  display: flex;
+
   font: var(--font-m);
 
   background: var(--bg-color);
   color: var(--primary-color);
 
   min-height: 100vh;
+}
+
+.content-page {
+  flex-grow: 1;
+  padding: 10px;
 }
