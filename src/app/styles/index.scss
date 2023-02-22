@@ -10,6 +10,10 @@
     min-height: 100vh;
 }
 
+.app-main {
+    display: flex;
+}
+
 .content-page {
     flex-grow: 1;
     padding: 10px;
