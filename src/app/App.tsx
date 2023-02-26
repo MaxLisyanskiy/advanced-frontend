@@ -11,7 +11,7 @@ const App = () => {
     const { theme } = useTheme();
 
     return (
-        <div className={classNames('app app-main', {}, [theme])}>
+        <div className={classNames('app app-main', {}, [])}>
             <Suspense fallback="">
                 <Sidebar />
                 <main className="content-page">
