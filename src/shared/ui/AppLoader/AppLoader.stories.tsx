@@ -5,7 +5,7 @@ import { Theme } from 'app/providers/ThemeProvider';
 import { AppLoader } from './AppLoader';
 
 export default {
-    title: 'shared/Loader',
+    title: 'shared/AppLoader',
     component: AppLoader,
     argTypes: {
         backgroundColor: { control: 'color' },
