@@ -1,7 +1,10 @@
 {
   "throw error": "throw error",
   "toggle": "toggle",
+  "Введите username": "Enter username",
+  "Введите пароль": "Enter password",
   "Войти": "Sign up",
+  "Войти1": "",
   "Главная": "Main",
   "О сайте": "About",
   "Обновить страницу": "Обновить страницу",
