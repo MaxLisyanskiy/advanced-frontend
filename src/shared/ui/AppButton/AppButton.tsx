@@ -10,18 +10,24 @@ export enum ThemeButton {
 
 interface AppButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
     className?: string,
-    theme?: ThemeButton
+    theme?: ThemeButton,
+    disabled?: boolean
 }
 
 export const AppButton: FC<AppButtonProps> = (props) => {
     const {
-        className, children, theme, ...otherProps
+        className, children, theme, disabled, ...otherProps
     } = props;
+
+    const mods: Record<string, boolean> = {
+        [cls.disabled]: disabled,
+    };
 
     return (
         <button
             type="button"
-            className={classNames(cls.AppButton, {}, [className, cls[theme]])}
+            disabled={disabled}
+            className={classNames(cls.AppButton, mods, [className, cls[theme]])}
             {...otherProps}
         >
             {children}

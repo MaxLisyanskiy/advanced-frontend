@@ -1,12 +1,13 @@
-import HTMLWebpackPlugin from 'html-webpack-plugin';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 import webpack from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
+import { BuildOptions } from './types/config';
 
-export function buildPlugins(path: string, isDev: boolean, analyze: boolean): webpack.WebpackPluginInstance[] {
+export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPluginInstance[] {
     const plugins = [
-        new HTMLWebpackPlugin({
-            template: path,
+        new HtmlWebpackPlugin({
+            template: paths.html,
         }),
         new webpack.ProgressPlugin(),
         new MiniCssExtractPlugin({
@@ -16,18 +17,18 @@ export function buildPlugins(path: string, isDev: boolean, analyze: boolean): we
         new webpack.DefinePlugin({
             __IS_DEV__: JSON.stringify(isDev),
         }),
-        // new BundleAnalyzerPlugin({
-        //     analyzerMode: analyze ? 'server' : 'disabled',
-        // }),
     ];
 
     if (isDev) {
         plugins.push(new webpack.HotModuleReplacementPlugin());
+        plugins.push(new BundleAnalyzerPlugin({
+            openAnalyzer: false,
+        }));
     }
 
-    if (analyze) {
-        plugins.push(new BundleAnalyzerPlugin());
-    }
+    // if (analyze) {
+    //     plugins.push(new BundleAnalyzerPlugin());
+    // }
 
     return plugins;
 }

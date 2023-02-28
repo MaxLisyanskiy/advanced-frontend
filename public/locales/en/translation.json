@@ -4,11 +4,13 @@
   "Введите username": "Enter username",
   "Введите пароль": "Enter password",
   "Войти": "Sign up",
-  "Войти1": "",
+  "Вы ввели неверный логин или пароль": "You entered an incorrect username or password",
+  "Выйти": "Logout",
   "Главная": "Main",
   "О сайте": "About",
   "Обновить страницу": "Обновить страницу",
   "Произошла непредвиденная ошибка": "Произошла непредвиденная ошибка",
   "Страница не найдена": "Page not found",
+  "Форма авторизации": "Authorization form",
   "Язык": "English"
 }
