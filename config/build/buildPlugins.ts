@@ -26,9 +26,5 @@ export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPlu
         }));
     }
 
-    // if (analyze) {
-    //     plugins.push(new BundleAnalyzerPlugin());
-    // }
-
     return plugins;
 }
