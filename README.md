@@ -10,9 +10,7 @@
 - **TypeScript** <sup>_[docs](https://www.typescriptlang.org/docs/handbook/typescript-from-scratch.html)_</sup>
 - **Jest** <sup>_[docs](https://jestjs.io/docs/getting-started)_</sup>
 - **SCSS** <sup>_[docs](https://sass-lang.com/documentation/)_</sup>
-- **CommerceTools API** <sup>_[docs](https://docs.commercetools.com/api/general-concepts)_</sup>
 - Teamwork tools:
   - **Prettier** <sup>_[docs](https://prettier.io/docs/en/)_</sup>
   - **ESLint** <sup>_[docs](https://eslint.org/docs/latest/use/core-concepts)_</sup>
   - **Husky** <sup>_[docs](https://typicode.github.io/husky/)_</sup>
-  - **lint-staged** <sup>_[docs](https://github.com/okonet/lint-staged)_</sup>
