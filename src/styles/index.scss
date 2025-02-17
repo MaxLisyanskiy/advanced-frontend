@@ -1,0 +1,38 @@
+@use "reset";
+@use "variables/global";
+@use "themes/dark";
+@use "themes/light";
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+
+  &.hidden {
+    overflow: hidden;
+  }
+}
+
+.app {
+  font: var(--font-m);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+
+  transition: all 0.3s ease;
+}
+
+header,
+footer {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+main {
+  flex-grow: 1;
+}

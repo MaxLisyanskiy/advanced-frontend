@@ -11,13 +11,16 @@ export function buildLoaders(isDev: boolean): webpack.RuleSetRule[] {
         options: {
           modules: {
             auto: (resPath: string) => resPath.includes(".module."),
-            localIdentName: isDev
-              ? "[path][name]__[local]--[hash:base64:3]"
-              : "[hash:base64:8]",
+            localIdentName: isDev ? "[path][name]__[local]--[hash:base64:3]" : "[hash:base64:8]",
           },
         },
       }, // Translates CSS into CommonJS
-      "sass-loader", // Compiles Sass to CSS
+      {
+        loader: "sass-loader",
+        options: {
+          api: "modern",
+        },
+      }, // Compiles Sass to CSS
     ],
   };
 
