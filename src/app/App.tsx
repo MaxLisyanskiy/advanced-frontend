@@ -7,14 +7,14 @@ import { useTheme } from "app/providers/theme-provider";
 
 import "./styles/index.scss";
 import { AppRouter } from "./providers/router";
+import { Navbar } from "widgets/navbar";
 
 const App = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
     <div className={classNames("app", {}, [theme])}>
-      <Link to="/main">Main</Link>
-      <Link to="/about">About</Link>
+      <Navbar />
       <button onClick={toggleTheme}>{theme}</button>
       <AppRouter />
     </div>
