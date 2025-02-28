@@ -4,15 +4,19 @@ import { useTheme } from "app/providers/theme-provider";
 import "./styles/index.scss";
 import { AppRouter } from "./providers/router";
 import { Navbar } from "widgets/navbar";
+import { Sidebar } from "widgets/sidebar";
 
 const App = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <div className={classNames("app", {}, [theme])}>
+    <main className={classNames("app", {}, [theme])}>
       <Navbar />
-      <AppRouter />
-    </div>
+      <div className="app-content">
+        <Sidebar />
+        <AppRouter />
+      </div>
+    </main>
   );
 };
 

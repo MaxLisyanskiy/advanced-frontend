@@ -27,6 +27,15 @@ body {
   transition: all 0.3s ease;
 }
 
+.app-content {
+  display: flex;
+}
+
+.page-wrapp {
+  flex-grow: 1;
+  padding: 20px;
+}
+
 header,
 footer {
   flex-grow: 0;
