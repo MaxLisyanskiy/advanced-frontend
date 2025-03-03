@@ -45,17 +45,18 @@ export function buildLoaders(isDev: boolean): webpack.RuleSetRule[] {
         loader: "css-loader",
         options: {
           modules: {
+            namedExport: false,
             auto: (resPath: string) => resPath.includes(".module."),
             localIdentName: isDev ? "[path][name]__[local]--[hash:base64:3]" : "[hash:base64:8]",
           },
         },
-      }, // Translates CSS into CommonJS
+      },
       {
         loader: "sass-loader",
         options: {
           api: "modern",
         },
-      }, // Compiles Sass to CSS
+      },
     ],
   };
 
