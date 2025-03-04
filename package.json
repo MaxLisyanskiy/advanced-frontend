@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "webpack serve --env port=5000 mode=development",
     "build:prod": "webpack --env mode=production",
     "build:dev": "webpack --env mode=development",
-    "lint": "npx eslint \"**/*.{ts,tsx}\"",
-    "lint:fix": "npx eslint '**/*.{ts,tsx}' --fix"
+    "eslint": "eslint \"**/*.{ts,tsx}\"",
+    "eslint:fix": "eslint \"**/*.{ts,tsx}\" --fix",
+    "stylelint": "stylelint \"**/*.scss\"",
+    "stylelint:fix": "stylelint \"**/*.scss\" --fix"
   },
   "repository": {
     "type": "git",
@@ -36,6 +39,7 @@
     "babel-plugin-i18next-extract": "^1.0.0",
     "css-loader": "^7.1.2",
     "eslint": "^9.21.0",
+    "eslint-plugin-i18next": "^6.1.1",
     "eslint-plugin-react": "^7.37.4",
     "file-loader": "^6.2.0",
     "globals": "^16.0.0",
@@ -44,6 +48,8 @@
     "sass": "^1.85.1",
     "sass-loader": "^16.0.5",
     "style-loader": "^4.0.0",
+    "stylelint": "^16.15.0",
+    "stylelint-config-standard-scss": "^14.0.0",
     "ts-loader": "^9.5.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.3",
