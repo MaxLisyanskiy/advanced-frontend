@@ -6,6 +6,6 @@ export const MainPageAsync = lazy(
       // TODO: remove timeout when hosting site
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
-      setTimeout(() => resolve(import("./MainPage")), 1500);
+      setTimeout(() => resolve(import("./main-page")), 1500);
     })
 );

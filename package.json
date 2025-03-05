@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "start": "webpack serve --env port=5000 mode=development",
+    "start": "webpack serve --config ./webpack.config.ts --env port=5000 mode=development",
     "build:prod": "webpack --env mode=production",
     "build:dev": "webpack --env mode=development",
     "eslint": "npx eslint \"**/*.{ts,tsx}\"",
