@@ -6,13 +6,16 @@ import { ThemeProvider } from "app/providers/theme-provider";
 import "shared/config/i18n/i18n";
 
 import "./index.scss";
+import { ErrorBoundary } from "app/providers/error-boundary";
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 
 root.render(
   <BrowserRouter>
-    <ThemeProvider>
-      <App />
-    </ThemeProvider>
+    <ErrorBoundary>
+      <ThemeProvider>
+        <App />
+      </ThemeProvider>
+    </ErrorBoundary>
   </BrowserRouter>
 );

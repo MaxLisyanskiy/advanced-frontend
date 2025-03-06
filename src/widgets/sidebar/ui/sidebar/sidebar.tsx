@@ -4,6 +4,7 @@ import { LangSwitcher } from "widgets/lang-switcher";
 
 import cls from "./sidebar.module.scss";
 import { classNames } from "shared/lib/class-names/class-names";
+import { BugButton } from "app/providers/error-boundary";
 
 interface SidebarProps {
   className?: string;
@@ -20,6 +21,7 @@ export const Sidebar = ({ className }: SidebarProps) => {
     <div className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [className])}>
       <button onClick={onToggle}>toggle</button>
       <div className={cls.switchers}>
+        <BugButton />
         <LangSwitcher />
         <ThemeSwitcher />
       </div>
