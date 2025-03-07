@@ -4,6 +4,7 @@ import webpack from "webpack";
 import { BuildPaths } from "./types/config";
 
 const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
 export function buildPlugins(paths: BuildPaths, isDev: boolean): webpack.WebpackPluginInstance[] {
   return [
@@ -20,5 +21,6 @@ export function buildPlugins(paths: BuildPaths, isDev: boolean): webpack.Webpack
     }),
     new ReactRefreshWebpackPlugin(),
     new webpack.HotModuleReplacementPlugin(),
+    new BundleAnalyzerPlugin({ openAnalyzer: false }),
   ];
 }
