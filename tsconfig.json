@@ -11,6 +11,13 @@
     "paths": {
       "*": ["./src/*"]
     },
+    // "types": ["node", "jest", "@testing-library/jest-dom"],
+    // "types": [
+    //   "node",
+    //   "jest",
+    //   "@testing-library/jest-dom",
+    //   "@testing-library/jest-dom/jest-globals"
+    // ],
     // esModuleInterop позволяет работать с пакетами, которые используют
     // common js как с обычными пакета с помощью import (require() module.export) = common js
     // import Moment from 'moment';
@@ -32,4 +39,6 @@
       "module": "CommonJS"
     }
   }
+  // "include": ["./config/jest/jest-setup.ts"]
+  // "types": ["node", "jest", "@testing-library/jest-dom"]
 }
