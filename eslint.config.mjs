@@ -26,6 +26,7 @@ export default [
     rules: {
       "react/react-in-jsx-scope": "off",
       "@typescript-eslint/no-require-imports": "off",
+      "react/display-name": "off",
       "@typescript-eslint/no-unused-vars": [
         "error",
         {

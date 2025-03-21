@@ -1,5 +1,5 @@
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import webpack from "webpack";
+import { buildCssLoader } from "./loaders/buildCssLoader";
 
 export function buildLoaders(isDev: boolean): webpack.RuleSetRule[] {
   const svgLoader = {
@@ -37,28 +37,7 @@ export function buildLoaders(isDev: boolean): webpack.RuleSetRule[] {
     exclude: /node_modules/,
   };
 
-  const cssLoader = {
-    test: /\.s[ac]ss$/i,
-    use: [
-      isDev ? "style-loader" : MiniCssExtractPlugin.loader, // Creates `style` nodes from js strings
-      {
-        loader: "css-loader",
-        options: {
-          modules: {
-            namedExport: false,
-            auto: (resPath: string) => resPath.includes(".module."),
-            localIdentName: isDev ? "[path][name]__[local]--[hash:base64:3]" : "[hash:base64:8]",
-          },
-        },
-      },
-      {
-        loader: "sass-loader",
-        options: {
-          api: "modern",
-        },
-      },
-    ],
-  };
+  const cssLoader = buildCssLoader(isDev);
 
   return [svgLoader, fileLoader, babelLoader, tsLoader, cssLoader];
 }

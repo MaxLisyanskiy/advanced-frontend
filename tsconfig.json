@@ -39,6 +39,5 @@
       "module": "CommonJS"
     }
   }
-  // "include": ["./config/jest/jest-setup.ts"]
-  // "types": ["node", "jest", "@testing-library/jest-dom"]
+  // "include": ["./config/jest/jest-setup.ts", "./src/**/*.ts", "./src/**/*.tsx"]
 }

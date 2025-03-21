@@ -11,7 +11,7 @@ interface ThemeSwitcherProps {
   className?: string;
 }
 
-const ThemeSwitcher = (props: ThemeSwitcherProps) => {
+export const ThemeSwitcher = (props: ThemeSwitcherProps) => {
   const { className } = props;
 
   const { theme, toggleTheme } = useTheme();
@@ -22,5 +22,3 @@ const ThemeSwitcher = (props: ThemeSwitcherProps) => {
     </AppButton>
   );
 };
-
-export default ThemeSwitcher;

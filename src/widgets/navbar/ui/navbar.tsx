@@ -8,7 +8,7 @@ interface NavbarProps {
   className?: string;
 }
 
-const Navbar = (props: NavbarProps) => {
+export const Navbar = (props: NavbarProps) => {
   const { className } = props;
 
   const { t } = useTranslation();
@@ -22,5 +22,3 @@ const Navbar = (props: NavbarProps) => {
     </nav>
   );
 };
-
-export default Navbar;
