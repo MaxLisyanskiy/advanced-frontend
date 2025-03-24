@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import { ErrorFallback } from "widgets/error-fallback/ui/error-fallback";
+import { ErrorFallback } from "widgets/error-fallback";
 
 interface ErrorBoundaryProps {
   children: React.ReactNode;

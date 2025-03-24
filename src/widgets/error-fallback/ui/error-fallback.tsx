@@ -15,7 +15,7 @@ export const ErrorFallback = ({ className }: ErrorFallbackProps) => {
   const handleResetPage = () => location.reload();
 
   return (
-    <div className={classNames(cls.errorFallback, {}, [className])}>
+    <div className={classNames(cls.error, {}, [className])}>
       <p>{t("Произошла ошибка!")}</p>
       <AppButton onClick={handleResetPage}>{t("Обновить страницу")}</AppButton>
     </div>
