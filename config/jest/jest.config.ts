@@ -10,6 +10,8 @@ import type { Config } from "jest";
 const config: Config = {
   preset: "ts-jest",
 
+  globals: { __IS_DEV__: true },
+
   clearMocks: true,
   collectCoverage: true,
   coverageDirectory: "coverage",
@@ -25,12 +27,13 @@ const config: Config = {
 
   setupFilesAfterEnv: ["<rootDir>config/jest/jest-setup.ts"],
   moduleNameMapper: {
+    "^entities/(.*)$": "<rootDir>/src/entities/$1",
     "\\.s?css$": "identity-obj-proxy",
     "\\.svg": path.resolve(__dirname, "jestEmptyComponent.tsx"),
   },
 
   rootDir: "../../",
-  testEnvironment: "jest-environment-jsdom",
+  testEnvironment: "jsdom",
   testMatch: ["<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)"],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
