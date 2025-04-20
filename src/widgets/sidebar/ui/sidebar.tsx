@@ -3,7 +3,7 @@ import { ThemeSwitcher } from "widgets/theme-switcher";
 import { LangSwitcher } from "widgets/lang-switcher";
 
 import cls from "./sidebar.module.scss";
-import { classNames } from "shared/lib/class-names/class-names";
+import { classNames } from "shared/lib/classNames/classNames";
 import { BugButton } from "app/providers/error-boundary";
 import { AppButton, ButtonSize, ButtonTheme } from "shared/ui/app-button/app-button";
 import { AppLink } from "shared/ui/app-link/app-link";

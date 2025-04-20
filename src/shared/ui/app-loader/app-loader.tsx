@@ -1,4 +1,4 @@
-import { classNames } from "shared/lib/class-names/class-names";
+import { classNames } from "shared/lib/classNames/classNames";
 import "./app-loader.scss";
 
 interface AppLoaderProps {
