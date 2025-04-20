@@ -18,7 +18,8 @@ const App = () => {
     <main className={classNames("app", {}, [theme])}>
       <Suspense fallback="">
         <Navbar />
-        <Modal isOpen={isOpen} onClose={() => setIsOpen(true)}>
+        {/* <button onClick={() => setIsOpen(true)}>'open'</button> */}
+        <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
           1111111111111111111111
         </Modal>
         <div className="app-content">

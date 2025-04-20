@@ -7,7 +7,7 @@ import { AppButton } from "shared/ui/app-button/app-button";
 export const Counter = () => {
   const dispatch = useDispatch();
   const counterValue = useSelector(getCounterValue);
-  // const { t } = useTranslation();
+  const { t } = useTranslation();
 
   const increment = () => {
     dispatch(counterActions.increment());
@@ -21,10 +21,10 @@ export const Counter = () => {
     <div>
       <h1 data-testid="value-title">{counterValue}</h1>
       <AppButton onClick={increment} data-testid="increment-btn">
-        {/* {t("increment")} */}
+        {t("increment")}
       </AppButton>
       <AppButton data-testid="decrement-btn" onClick={decrement}>
-        {/* {t("decrement")} */}
+        {t("decrement")}
       </AppButton>
     </div>
   );
